@@ -10,28 +10,27 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
 
   if (!header) {
     return (
-      <header className="relative p-8 text-center">
-        <p className="text-gray-400 font-bold">No Header Available</p>
+      <header>
+        <p>No Header Available</p>
       </header>
     );
   }
 
   return (
-    <header className="relative w-full mx-auto bg-white px-8">
+    <header>
       <img
-        className="h-14 sm:h-20 w-auto z-50"
         src={header.logo.url}
         alt={header.logo.label}
         title={header.logo.siteName}
       />
-      <p className="font-bold text-xl text-secondary-500 ml-3 mt-2">
+      <p>
         {header.siteName}
       </p>
-      <nav className="hidden md:flex space-x-10">
+      <nav>
         {header.links.map((navitem, index) => {
           return (
             <Link href={href} key={`mobile-${index}`} as={navitem.path}>
-              <a className="text-base leading-6 font-medium text-secondary-500 hover:text-primary-500 border-transparent border-b-2 hover:border-primary-500 hover:border-b-primary hover:border-b-2 focus:outline-none focus:text-primary-500 transition duration-300">
+              <a>
                 {navitem.title}
               </a>
             </Link>
