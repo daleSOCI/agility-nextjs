@@ -9,7 +9,5 @@ module.exports = {
 			`${process.env.AGILITY_GUID}-cdn.agilitycms.cloud`,
 		],
 	},
-	future: {
-		webpack5: true
-	},
+	webpack5: true,
 };
